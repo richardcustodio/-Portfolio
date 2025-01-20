@@ -1,0 +1,543 @@
+/* ========================
+   VARIÁVEIS GERAIS
+========================= */
+:root {
+    --cor-primaria: #03071e;
+    --cor-secundaria: #023047;
+    --cor-primaria-hover: #034668;
+    --cor-texto: #fff;
+    --cor-fundo: #669BBC;
+    --cor-link: #0066cc;
+    --cor-link-hover: #003366;
+    --cor-secao-fundo: #001D3D; /* Nova variável para o fundo das seções */
+    --fonte-padrao: 'Arial', sans-serif;
+    --cor-barra-progresso: #ffb703;
+}
+
+/* ========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding-top: 4rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-link);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--cor-link-hover);
+}
+
+/* ========================
+   CABEÇALHO
+========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4pz 8px rgba(0, 0, 0, 0.1);
+    max-width: auto;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+header .menu {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+header .nav-links li a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+header .nav-links li a:hover {
+    color: var(--cor-secundaria);
+    background-color: #669BBC;
+}
+
+/* ======================== 
+  SEÇÃO PRINCIPAL 
+  ========================= */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main .foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+main .intro {
+    flex: 2;
+}
+
+main .intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+main .intro p {
+    margin-bottom: 1rem;
+}
+
+main .links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+
+/* Estilo para a imagem de perfil */
+.foto-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.foto-perfil {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    border: 3px solid var(--cor-primaria);
+    object-fit: cover;
+}
+
+/* ========================
+   SEÇÕES (Sobre Mim, Formação, Projetos, Habilidades, Contato)
+========================= */
+/* Seção principal *//* Estilos gerais das seções */
+section {
+    padding: 3rem 2rem;
+    background-color: var(--cor-secao-fundo); /* Usando a nova variável */
+    margin: 2rem auto;
+    border-radius: 10px;
+    max-width: 1300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para títulos das seções */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--cor-texto);
+    text-align: center; /* Centralizar títulos */
+}
+
+/* Estilo para parágrafos */
+section p {
+    margin-bottom: 1rem;
+    line-height: 1.6; /* Melhorar a leitura */
+    text-align: justify; /* Justificar o texto */
+}
+
+/* Estilo para cards dentro das seções */
+.formacao-card, .projeto-card, .habilidade-item {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formacao-card, .projeto-card {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* Centralizar e ajustar imagens dentro de containers */
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem 0;
+}
+
+.imagem-container img {
+    width: 200rem; /* Ajustar o tamanho das imagens */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Garantir que a imagem não distorça */
+}
+
+/* Estilizar os títulos e descrições */
+.formacao-titulo .projeto-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem 0;
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+.formacao-descricao .projeto-descricao {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Estilo para as habilidades */
+.habilidade-item {
+    justify-content: space-between;
+}
+
+/* Barra de progresso das habilidades */
+.barra-progresso {
+    flex: 1;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.barra-progresso .nivel {
+    height: 100%;
+    background: var(--cor-barra-progresso);
+    transition: width 0.3s ease; /* Adicionar transição para suavidade */
+}
+
+/* Estilo para a seção de introdução */
+.intro {
+    text-align: center; /* Centralizar conteúdo */
+    margin: 2rem auto;
+}
+
+.intro-titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.intro-texto {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.link:hover {
+    background: var(--cor-primaria-hover);
+}
+/* ========================
+   FORMULÁRIO DE CONTATO
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--cor-link);
+}
+
+/* Mensagem */
+
+.aviso-contato {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* ========================
+   RESPONSIVIDADE
+========================= */
+
+/* Responsividade para telas maiores */
+@media (min-width: 1025px) {
+    .menu {
+        position: static; /* Remove o comportamento de menu lateral */
+        width: auto; /* Deixa o menu ocupar o espaço necessário */
+        height: auto;
+        display: flex; /* mostra os itens horizontalmente */
+        flex-direction: row; /* Alinha os itens horizontalmente */
+        justify-content: flex-end; /* Alinha ao lado direito */
+        gap: 30px; /* Espaço entre as opções */
+        transform: none; /* Remove o deslocamento lateral */
+        box-shadow: none; /* Sem sombra em desktop */
+    }
+
+    .menu.open {
+        transform: none; /* Não aplica o comportamento de abrir/fechar */
+    }
+
+    .menu-toggle {
+        display: none; /* Remove o botão de menu */
+    }
+
+    .menu-icon,
+    .close-icon {
+        display: none; /* Não exibe os ícones */
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        max-width: 1100px; /* Centraliza o conteúdo e evita que se espalhe */
+        margin: 0 auto; /* Centraliza no meio da tela */
+    }
+
+    .intro h1 {
+        font-size: 3rem; /* Títulos maiores em telas grandes */
+    }
+
+    .intro p {
+        font-size: 1.2rem; /* Aumenta a legibilidade do texto */
+    }
+
+    .foto .placeholder {
+        width: 350px;
+        height: 350px; /* Ajusta a foto para telas maiores */
+    }
+
+    .links a {
+        padding: 12px 25px; /* Botões maiores */
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-toggle {
+        display: flex; /* Exibe o botão do menu em tablets */
+    }
+
+    .menu {
+        display: none; /* Esconde o menu por padrão */
+    }
+
+    .menu.open {
+        display: flex; /* Mostra o menu ao clicar */
+        flex-direction: column; /* Alinha as opções verticalmente */
+        padding: 10px;
+        gap: 15px;
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .intro {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+    .foto img {
+        max-width: 250px; /* Aumenta a imagem para telas maiores */
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end; /* Alinha o menu à direita */
+        gap: 30px;
+    }
+    main {
+        padding: 10px; /* Reduz o espaço lateral */
+    }
+
+    .intro h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    .foto .placeholder {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+/* Ajustes Responsivos */
+/* Esconde o menu inicialmente em telas pequenas */
+@media (max-width: 768px) {
+    header .menu {
+        display: flex; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        transform: translatex(100%);
+        background-color: var(--cor-secundaria);
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    header .menu.open {
+        display: flex; /* Mostra o menu ao abrir */
+        transform: translate(0);
+    }
+
+    header .nav-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    header .nav-links li {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .nav-links li a {
+        padding: 0.5rem;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    header .menu-toggle {
+        display: block; /* Exiber o botão do menu em resoluções menores */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 10px; /* Reduz o espaçamento ainda mais */
+    }
+
+    .foto {
+        width: 80px; /* Ajusta a largura da foto */
+    }
+
+    .foto img {
+        max-width: 80px; /* Ajusta o tamanho máximo da imagem */
+    }
+
+    .intro h1 {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+
+    .intro p {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+    }
+
+    .links a {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto do botão */
+        padding: 6px 12px; /* Ajusta o espaçamento interno */
+    }
+
+    .sobre-mim, .formacao-card {
+        padding: 10px; /* Ajusta o espaçamento interno */
+        margin: 10px; /* Ajusta o espaçamento externo */
+    }
+}
