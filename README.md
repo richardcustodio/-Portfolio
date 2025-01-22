@@ -26,12 +26,12 @@ With a keen eye for detail and a problem-solving mindset, I aim to transform ide
 Explore meus projetos para conhecer mais sobre minhas habilidades:  
 Explore my projects to learn more about my skills:  
 
-1. **[Projeto 1](https://github.com/richardcustodio/Decofidificador-de-texto)** - Descrição breve do projeto.  
-   **[Project 1](https://github.com/richardcustodio/Decofidificador-de-texto)** - Brief project description.  
-2. **[Projeto 2](https://github.com/richardcustodio/Jogo-do-numero-secreto)** - Descrição breve do projeto.  
-   **[Project 2](https://github.com/richardcustodio/Jogo-do-numero-secreto)** - Brief project description.  
-3. **[Projeto 3](https://github.com/richardcustodio/CinesCuriosidades)** - Descrição breve do projeto.  
-   **[Project 3](https://github.com/richardcustodio/CinesCuriosidades)** - Brief project description.  
+1. **[Decofidificador-de-texto](https://github.com/richardcustodio/Decofidificador-de-texto)** - Descrição breve do projeto.  
+   **[Text Decoder](https://github.com/richardcustodio/Decofidificador-de-texto)** - Brief project description.  
+2. **[Jogo-do-numero-secreto](https://github.com/richardcustodio/Jogo-do-numero-secreto)** - Descrição breve do projeto.  
+   **[Secret Number Game](https://github.com/richardcustodio/Jogo-do-numero-secreto)** - Brief project description.  
+3. **[CinesCuriosidades](https://github.com/richardcustodio/CinesCuriosidades)** - Descrição breve do projeto.  
+   **[CinesCuriosidades](https://github.com/richardcustodio/CinesCuriosidades)** - Brief project description.  
 
 *(Adicione links e descrições dos projetos conforme necessário.)*  
 *(Add links and descriptions for projects as needed.)*
